@@ -1,0 +1,9 @@
+<input type="text" name="name" placeholder="Enter Name" #username>
+<input type="password" name="password" placeholder="Enter Password" #password>
+<button (click)="goToHome(username.value,password.value)">Log in</button>
+<div *ngIf="varAlready;else other">
+   Log In Failed
+</div>
+<ng-template #other>
+    {{variable.token}}
+</ng-template>

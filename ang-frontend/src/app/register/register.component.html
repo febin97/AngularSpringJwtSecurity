@@ -1,0 +1,9 @@
+<input type="text" name="name" placeholder="Enter Name" #username>
+<input type="password" name="password" placeholder="Enter Password" #password>
+<button (click)="goToLogin(username.value,password.value)">Register</button>
+<div *ngIf="varAlready;else other">
+    User Name Already Exists
+</div>
+<ng-template #other>
+    {{variable.token}}
+</ng-template>
