@@ -5,5 +5,7 @@
     User Name Already Exists
 </div>
 <ng-template #other>
-    {{variable.token}}
+    <div *ngIf="variable">
+            {{variable.token}}
+    </div>
 </ng-template>
